@@ -8,26 +8,27 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-import Dish from '../interface/Dish';
+import DataHour from '../interface/DataHour';
 
-export default function DishTable( { data } : { data: Dish[] } ) {
+export default function HydrologyTable( { data } : { data: DataHour[] } ) {
 
-  let [rows, setRows] = useState(Array<Dish>)
+  let [rows, setRows] = useState(Array<DataHour>)
 
   let getRows = () => {
     if (rows.length) {
       return (
-        rows.slice(0,10).map((row) => (
+        rows.map((row, idx) => (
           <TableRow
-            key={row.position}
+            key={idx}
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
           >
             <TableCell component="th" scope="row">
-              {row.position}
+              {row.Fecha}
             </TableCell>
-            <TableCell align="right">{row.title} ({row.subtitle})</TableCell>
+            <TableCell align="center">{row.Mazar}</TableCell>
             
             {/* PENDIENTE: Valores a renderizar en cada celda  */}
+            
             
           </TableRow>
         ))
@@ -48,10 +49,11 @@ export default function DishTable( { data } : { data: Dish[] } ) {
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Puesto</TableCell>
-            <TableCell align='center'>Plato</TableCell>
+            <TableCell>Fecha</TableCell>
+            <TableCell align='center'>Mazar</TableCell>
             
             {/* PENDIENTE: Cabeceras de las columnas  */}
+            
 
           </TableRow>
         </TableHead>

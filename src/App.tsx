@@ -1,19 +1,17 @@
 import './App.css'
 
 import Grid from '@mui/material/Grid2' 
-import DishTable from './components/DishTable'
+import HydrologyTable from './components/HydrologyTable'
 import Student from './components/Student'
 
 // PENDIENTE: Cree la interfaz
-import Dish from './interface/Dish'
-
+import DataHour from './interface/DataHour'
 
 function App() {
 
-  let url = "https://raw.githubusercontent.com/aavendan/datos/refs/heads/main/tasteatlas/bestdishes100-2425.json"
+  let url = "https://raw.githubusercontent.com/aavendan/datos/refs/heads/main/CELEC/hidrologia_17122024.json"
   
   // PENDIENTE: Variable de estado y la función de modificación. 
-  
 
 
   // PENDIENTE: 
@@ -34,11 +32,11 @@ function App() {
 
         </Grid>
         
-        {/* DishTable */}
+        {/* HydrologyTable */}
         <Grid size={{ xs: 12 }}>
 
           {/* PENDIENTE: Envíe la variable de estado como prop */}
-          <DishTable data={  }></DishTable>
+          <HydrologyTable data={ }></HydrologyTable>
         
         </Grid>
         
