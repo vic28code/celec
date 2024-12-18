@@ -1,7 +1,11 @@
 import Typography from '@mui/material/Typography';
 
 //PENDIENTE: Agregue los props apellidos, nombres y paralelo
-export default function Student() {
+interface Data {
+
+}
+
+export default function Student( data: Data ) {
     return (
         <>
             <Typography component="p" variant="h4">
